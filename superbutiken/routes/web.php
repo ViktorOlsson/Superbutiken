@@ -12,17 +12,15 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return view('index');
 });
 
 $router->get('/products', 'ProductController@index');
 
 $router->get('/products/{id}', 'ProductController@show');
 
-$router->get('/stores', function () use ($router) {
-  return "This is all stores";
-});
+$router->post('/newproduct', 'ProductController@order');
 
-$router->get('/reviews', function () use ($router) {
-  return "This is all reviews";
-});
+$router->get('/stores', 'StoresController@index');
+
+$router->get('/reviews', 'ReviewsController@index');

@@ -8,15 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 
-class Products extends Model implements AuthenticatableContract, AuthorizableContract
+class Stores extends Model implements AuthenticatableContract, AuthorizableContract
 {
     use Authenticatable, Authorizable;
 
-    protected $table = 'products';
+    protected $table = 'stores';
 
-    protected $fillable = ['title', 'brand', 'price', 'description', 'image'];
-
-    protected $hidden = [];
-
-    
+    protected $fillable = ['name', 'city'];
 }
