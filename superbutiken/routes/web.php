@@ -19,7 +19,7 @@ $router->get('/products', 'ProductController@index');
 
 $router->get('/products/{id}', 'ProductController@show');
 
-$router->post('/newproduct', 'ProductController@order');
+$router->post('/products', 'ProductController@create');
 
 $router->get('/stores', 'StoresController@index');
 

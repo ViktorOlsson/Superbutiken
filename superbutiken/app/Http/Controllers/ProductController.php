@@ -48,7 +48,7 @@ class ProductController extends Controller{
   }
 
   //Saves a new product to the database. Information that is saved is used 
-  public function order(Request $request){
+  public function create(Request $request){
     $product = new Products;
     $product->title = $request->input('title');
     $product->brand = $request->input('brand');
